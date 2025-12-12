@@ -21,6 +21,5 @@ I started off with a model trained on street-level potholes (which performed poo
 - here's the data
 - here's the models
 - requirements (idk do i really need this?)
-
-
+- 
 
