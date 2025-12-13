@@ -1,0 +1,15 @@
+ultralytics
+opencv-python
+matplotlib
+kagglehub
+PyYAML
+inference-sdk
+torch
+torchvision
+supervision
+jupyter_bbox_widget
+numpy
+pandas
+Pillow
+ipython
+python-dotenv
