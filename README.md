@@ -10,7 +10,9 @@ I started off with a model trained on street-level potholes (which performed poo
 - `notebooks/01_train_and_validate_yolo.ipynb`: Main training, validation, and inference. (adapted from [yolo template](https://github.com/mfranzon/yolo-training-template))
 - `notebooks/02_sam3_get_labels.ipynb`: Setup and run SAM 3. Convert object masks to polygon labels in yolo format.
 
-
+## Setup
+- This repo assumes you're connecting to Google's Colab environment
+- Some inference tasks require a Roboflow API key to access hosted models (incl SAM3).
 
 ## Models & Results
 
