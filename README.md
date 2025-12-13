@@ -7,15 +7,15 @@ This project explores the impact of data strategy on custom computer vision mode
 I started off with a model trained on street-level potholes (which performed poorly on aerial-view potholes) and iteratively improved it with a domain-specific dataset. I benchmarked these models against eachother and Meta's SAM 3 to compare object detection between fine tuned custom models and publicly available off-the-shelf solutions.
 
 ## Repo structure 
+- `requirements.txt`: Dependencies (note SAM 3 dependencies omitted intentionally)
 - notebooks/
     - `01_train_and_validate_yolo.ipynb`: Main training, validation, and inference. (adapted from [yolo template](https://github.com/mfranzon/yolo-training-template))
     - `02_sam3_get_labels.ipynb`: Setup and run SAM 3. Convert object masks to polygon labels in yolo format.
-- `requirements.txt`: Dependencies (note SAM 3 dependencies omitted intentionally)
 
 ## Setup
 - This repo assumes you're connecting to Google's Colab environment
 - Some inference tasks require a Roboflow API key to access hosted models (incl SAM3).
-- The SAM 3 notebook uses HF API to download the model. You'll need to request access to the repo and provide your HF API key.
+- The SAM 3 notebook uses HF API to download the model. You'll need to request access to the repo and provide your HF API key (instructions provided)
 
 ## Models & Results
 
