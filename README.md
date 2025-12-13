@@ -7,8 +7,9 @@ This project explores the impact of data strategy on custom computer vision mode
 I started off with a model trained on street-level potholes (which performed poorly on aerial-view potholes) and iteratively improved it with a domain-specific dataset. I benchmarked these models against eachother and Meta's SAM 3 to compare object detection between fine tuned custom models and publicly available off-the-shelf solutions.
 
 ## Repo structure 
-- `notebooks/01_train_and_validate_yolo.ipynb`: Main training, validation, and inference. (adapted from [yolo template](https://github.com/mfranzon/yolo-training-template))
-- `notebooks/02_sam3_get_labels.ipynb`: Setup and run SAM 3. Convert object masks to polygon labels in yolo format.
+- notebooks/
+    - `01_train_and_validate_yolo.ipynb`: Main training, validation, and inference. (adapted from [yolo template](https://github.com/mfranzon/yolo-training-template))
+    - `02_sam3_get_labels.ipynb`: Setup and run SAM 3. Convert object masks to polygon labels in yolo format.
 - `requirements.txt`: Dependencies (note SAM 3 dependencies omitted intentionally)
 
 ## Setup
