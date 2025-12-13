@@ -6,20 +6,22 @@ This project explores the impact of data strategy on custom computer vision mode
 
 I started off with a model trained on street-level potholes (which performed poorly on aerial-view potholes) and iteratively improved it with a domain-specific dataset. I benchmarked these models against eachother and Meta's SAM 3 to compare object detection between fine tuned custom models and publically available off-the-shelf solutions.
 
-**Results:**
-- **Baseline; Ground-level images @ 1 Epoch:** 0.45% mAP50
-- **Baseline; Ground-level images @ 20 Epoch:** 0.43% mAP50
-- **Aerial Images @ 20 Epochs:** 42.9% mAP50
-- **Aerial Images @ 350 Epochs:** 50.4% mAP50
-- **Aerial Images, Hyperparameter tuned @ 350 Epochs:** 57.0% mAp50
+## Repo structure 
+- `notebooks/01_train_and_validate_yolo.ipynb`: Main training, validation, and inference. (adapted from [yolo template](https://github.com/mfranzon/yolo-training-template))
+- `notebooks/02_sam3_get_labels.ipynb`: Setup and run SAM 3. Convert object masks to polygon labels in yolo format.
 
-## Repo structure
-- here's the notebooks
-    - One to train/validate (yolo template)
-    - One to compare (?)
-    - One to turn sam3 into yolo labels
-- here's the data
-- here's the models
-- requirements (idk do i really need this?)
-- 
+
+
+## Models & Results
+
+| # | Model | Epochs | mAP50 | Download
+| -- | -- | -- | -- | -- 
+| 1 | Control_1e | 1 | 0.45% | [Link (HF)](https://huggingface.co/nmata010/street-level-pothole-detection-11192025_1epoch)
+| 2 | Control_20e | 20 | 0.42% | [Link (HF)](https://huggingface.co/nmata010/street-level-pothole-detection-11192025_20epoch)
+| 3 | Aerial_1e | 20 | 10.2% | [Link (HF)](https://huggingface.co/nmata010/aerial-pothole-detection-11212025_1Epoch_newDS)
+| 4 | Aerial_20e | 20 | 42.9% | [Link (HF)](https://huggingface.co/nmata010/aerial-pothole-detection-11252025_20Epoch_newDS)
+| 5 | Aerial_350e | 350 | 50.4% | [Link (HF)](https://huggingface.co/nmata010/aerial-pothole-detection-12022025_350Epoch_newDS)
+| 6 | RoboflowAerial_350e | 350 | 57% | --
+
+
 
